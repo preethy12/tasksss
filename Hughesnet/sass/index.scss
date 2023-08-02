@@ -1,0 +1,211 @@
+@use "./colors"as*;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;300;400;500&family=Work+Sans:ital,wght@0,300;0,500;1,600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+.satellite{
+    max-width: 1200px;
+    margin: 3rem auto 0 auto;
+
+    &-container{
+        display: flex;
+        justify-content: center;
+    }
+    &-card{
+        width: 264px;
+        margin: 15px;
+        position: relative;
+        background-color:$white;
+        box-shadow: 0 2px 10px 0 $black;
+        font-size: 16px;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        &__data{
+            background-color: $primary-blue;
+            margin: 0 auto;
+            border-radius: 30px;
+            color: $white;
+            font-size: 17px;
+            line-height: 1.2;
+            width: 155px;
+            padding: 8px 0;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            top: -23px;
+            border: 2px solid transparent;
+        }
+        &__fusion-data{
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.2;
+            width: 155px;
+            padding: 8px 0;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            top: -23px;
+            background-color: $white;
+            color: $orange;
+            border: 2px solid $orange;
+            border-radius:18px;
+        }
+        &__title{
+            margin-top: 15px ;
+            padding: 0 20px;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: $secondary-blue;
+            margin-bottom: 9px;
+            text-align: center;
+        }
+        &__desc{
+            margin: 15px 0;
+            padding: 0 20px;
+            font-size: 16px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            color: $gray;
+            text-align: center;
+            font-weight: 400;
+        }
+        &__speed{
+            margin-bottom: 15px ;
+            padding: 0 20px;
+            font-weight: 500;
+            color: $gray;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.2;
+        }
+        &__price{
+            font-size: 35px;
+            line-height: 1.2;
+            color: $primary-blue;
+            line-height: 26px;
+            margin-top: 5px;
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        &__prev{
+            position: relative;
+            color: $primary-blue;
+            height: 26px;
+            text-align: center;
+            font-size: 22px;
+            line-height: 1.2;
+            &::before{
+                position: absolute;
+                content: "";
+                top: 50%;
+                width: 110px;
+                border-top: 1px solid;
+                border-color: $secondary-blue;
+                transform: rotate(-10deg);
+            }
+
+        }
+        &__save{
+            font-size: 16px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color:$gray;
+            text-align: center;
+        }
+        &--button{
+            display: flex;
+            flex-grow: 1;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 13px;
+            margin-bottom: 25px;
+
+        }
+        &--link{
+            text-decoration: none;
+            width: 122px;
+            align-items: center;
+            display: inline-block;
+            text-transform: uppercase;
+            color:$white;
+            background-color: $orange;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 30px;
+            outline: none;
+            border: 1px solid $orange;
+            margin: 0 5px;
+            padding: 0;
+            line-height: 25px;
+            height: 25px;
+            transition: background-color .1s ease-in-out,color .1s ease-in-out,border-color .1s ease-in-out;
+            padding: 5px 15px;
+            &:hover{
+                color:$orange;
+                background-color: $white;
+            }
+            &__learn-more{
+                text-decoration: none;
+                color:$white;
+            }
+        }
+        &__fusion{
+            background-color:$secondary-blue ;
+            &-title{
+                color:$white;
+            }
+            &-desc{
+                color:$white;
+            }
+            &-speed{
+                color:$white;
+
+            }
+            &-prev{
+                color:$white;
+                &::before{
+                    border-color:$white;
+
+                }
+            }
+            &-price{
+                color:$white;
+            }
+            &-save{
+                color:$white;
+            }
+            &--link{
+                color: $orange;
+                background-color: $white;
+                &:hover{
+                    background-color: $orange;
+                    color: $white;
+                }
+
+            }
+        }
+
+    }
+}
+.satellite-card.satellite-card__fusion::before{
+    content: '';
+    background-image: url('https://www.hughesnet.com/themes/custom/hughesnet_na_base_theme/images/Starburst.png');
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 68px;
+    position: absolute;
+    top:-8%;
+    left: -8%;
+}
+sup {
+    font-size: 60%;
+    top:-5em;
+}
+
